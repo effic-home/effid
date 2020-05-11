@@ -27,3 +27,8 @@ mkdir -p /opt/monitoring && cd /opt/monitoring
 docker network create monitoring
 docker volume create grafana-volume
 docker volume create influxdb-volume
+
+## Fichiers
+mkdir -p /opt/monitoring
+wget -O- https://raw.githubusercontent.com/effic-home/effid/master/monitoring/telegraph.conf > telegraph.conf
+wget -O- https://raw.githubusercontent.com/effic-home/effid/master/monitoring/docker-compose.yml > docker-compose.yml
