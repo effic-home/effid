@@ -1,5 +1,25 @@
-version: "2"
+version: "3"
 services:
+
+### Container portail http
+  web:
+    build: ~/web
+    ports:
+      - "80:80"
+      - "443:443"
+
+### Container Base de données mysql
+  database:
+    image: mysql
+    ports:
+    - "3306:3306"
+    environment:
+    - MYSQL_ROOT_PASSWORD=APOKALYPSIS
+    - MYSQL_USER=effid
+    - MYSQL_PASSWORD=ABISS
+    - MYSQL_DATABASE=effid
+
+### Container supervision grafana
   grafana:
     image: grafana/grafana
     container_name: grafana
@@ -10,7 +30,8 @@ services:
       - monitoring
     volumes:
       - grafana-volume:/var/lib/grafana
-  
+
+### Container base InfluxDB
   influxdb:
     image: influxdb
     container_name: influxdb
@@ -21,10 +42,12 @@ services:
       - monitoring
     volumes:
       - influxdb-volume:/var/lib/influxdb
-      
+
+# Reseaux de communication entre containers
 networks:
   monitoring:
-  
+
+# Volumes de stockage de données des containers
 volumes:
   grafana-volume:
     external: true
