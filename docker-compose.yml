@@ -1,4 +1,4 @@
-version: "3"
+version: "2"
 services:
 
 ### Container portail http
@@ -7,6 +7,14 @@ services:
     ports:
       - "80:80"
       - "443:443"
+
+### API REST
+  api:
+    image: effid/api
+    ports:
+    - "10000:10000"
+  networks:
+    - data
 
 ### Container Base de données mysql
   database:
@@ -46,6 +54,7 @@ services:
 # Reseaux de communication entre containers
 networks:
   monitoring:
+  data:
 
 # Volumes de stockage de données des containers
 volumes:
