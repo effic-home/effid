@@ -18,14 +18,16 @@ services:
 
 ### Container Base de données mysql
   database:
-    image: mysql
+    image: jsurf/rpi-mariadb
     ports:
     - "3306:3306"
     environment:
     - MYSQL_ROOT_PASSWORD=APOKALYPSIS
     - MYSQL_USER=effid
-    - MYSQL_PASSWORD=ABISS
-    - MYSQL_DATABASE=effid
+    - MYSQL_PASSWORD=ABYSS
+    - MYSQL_DATABASE=eff-id
+    volumes:
+      - mysql-volume:/var/lib/mysql
 
 ### Container supervision grafana
   grafana:
@@ -61,4 +63,6 @@ volumes:
   grafana-volume:
     external: true
   influxdb-volume:
+    external: true
+  mysql-volume:
     external: true
