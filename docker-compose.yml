@@ -14,7 +14,7 @@ services:
     ports:
     - "10000:10000"
   networks:
-    - data
+    - effid
 
 ### Container Base de données mysql
   database:
@@ -28,6 +28,8 @@ services:
     - MYSQL_DATABASE=eff-id
     volumes:
       - mysql-volume:/var/lib/mysql
+    networks:
+      - effid
 
 ### Container supervision grafana
   grafana:
@@ -37,7 +39,7 @@ services:
     ports:
       - 3000:3000
     networks:
-      - monitoring
+      - effid
     volumes:
       - grafana-volume:/var/lib/grafana
 
@@ -49,14 +51,13 @@ services:
     ports:
       - 8086:8086
     networks:
-      - monitoring
+      - effid
     volumes:
       - influxdb-volume:/var/lib/influxdb
 
 # Reseaux de communication entre containers
 networks:
-  monitoring:
-  data:
+  effid:
 
 # Volumes de stockage de données des containers
 volumes:
