@@ -13,8 +13,8 @@ services:
     image: effid/api
     ports:
     - "10000:10000"
-  networks:
-    - effid
+  # networks:
+  #   - effid
 
 ### Container Base de données mysql
   database:
@@ -28,40 +28,40 @@ services:
     - MYSQL_DATABASE=eff-id
     volumes:
       - /var/lib/mysql:/var/lib/mysql
-    networks:
-      - effid
+    # networks:
+    #   - effid
 
 ### Container supervision grafana
-  grafana:
-    image: grafana/grafana
-    container_name: grafana
-    restart: always
-    ports:
-      - 3000:3000
-    networks:
-      - effid
-    volumes:
-      - grafana-volume:/var/lib/grafana
+  # grafana:
+  #   image: grafana/grafana
+  #   container_name: grafana
+  #   restart: always
+  #   ports:
+  #     - 3000:3000
+  #   networks:
+  #     - effid
+  #   volumes:
+  #     - grafana-volume:/var/lib/grafana
 
 ### Container base InfluxDB
-  influxdb:
-    image: influxdb
-    container_name: influxdb
-    restart: always
-    ports:
-      - 8086:8086
-    networks:
-      - effid
-    volumes:
-      - influxdb-volume:/var/lib/influxdb
+  # influxdb:
+  #   image: influxdb
+  #   container_name: influxdb
+  #   restart: always
+  #   ports:
+  #     - 8086:8086
+  #   networks:
+  #     - effid
+  #   volumes:
+  #     - influxdb-volume:/var/lib/influxdb
 
 # Reseaux de communication entre containers
-networks:
-  effid:
+# networks:
+#   effid:
 
 # Volumes de stockage de données des containers
-volumes:
-  grafana-volume:
-    external: true
-  influxdb-volume:
-    external: true
+# volumes:
+#   grafana-volume:
+#     external: true
+#   influxdb-volume:
+#     external: true
