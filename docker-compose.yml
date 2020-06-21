@@ -26,6 +26,9 @@ services:
     - MYSQL_USER=effid
     - MYSQL_PASSWORD=ABYSS
     - MYSQL_DATABASE=eff-id
+    - MYSQL_DATA_DIR=/var/lib/mysql
+    - MYSQL_RUN_DIR=/run/mysqld
+    - MYSQL_LOG_DIR=/var/log/mysql
     volumes:
       - /var/lib/mysql:/var/lib/mysql
     networks:
