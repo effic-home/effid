@@ -12,7 +12,7 @@ services:
   api:
     image: effid/api
     ports:
-    - "10000:10000"
+    - 10000:10000
     networks:
       - effid
 
@@ -20,7 +20,7 @@ services:
   database:
     image: effid/sql
     ports:
-    - "3306:3306"
+    - 3306:3306
     environment:
     - MYSQL_ROOT_PASSWORD=APOKALYPSIS
     - MYSQL_USER=effid
@@ -29,10 +29,23 @@ services:
     - MYSQL_DATA_DIR=/var/lib/mysql
     - MYSQL_RUN_DIR=/run/mysqld
     - MYSQL_LOG_DIR=/var/log/mysql
-    volumes:
-      - /var/lib/mysql:/var/lib/mysql
+    # volumes:
+    #   - /var/lib/mysql:/var/lib/mysql
     networks:
       - effid
+
+  netdata:
+    image: netdata/netdata
+    ports:
+      - 19999:19999
+    cap_add:
+      - SYS_PTRACE
+    security_opt:
+      - apparmor:unconfined
+    volumes:
+      - /proc:/host/proc:ro
+      - /sys:/host/sys:ro
+      - /var/run/docker.sock:/var/run/docker.sock:ro
 
 ### Container supervision grafana
   # grafana:
