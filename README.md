@@ -14,7 +14,7 @@ Le fichier docker-compose télécharge et déploie les composantes suivantes :
 - l'API
 - un serveur Apache avec le site web d'administration
 - une base de données MySQL avec les tables et schémas
-- une pile TIG (Telegraf InfluxDB Grafana) afin de superviser le système
+- Un outil de supervision le système avec Netdata et la pile TIG
 - Portainer, afin de proposer un contrôle des conteneurs
 
 ### Installation
@@ -27,4 +27,10 @@ EFFID peut être installé sur un Raspberry Pi avec cette commande :
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/effic-home/effid/master/install.sh)"
 ```
 
-Lors du démarrage de certaines composantes, il sera demandé à l'utilisateur de créer des mots de passe afin de sécuriser l'installation.
+Il vous suffit ensuite d'éditer le fichier docker-compose.yml afin de personnaliser les mots de passes.
+
+Pour démarrer les services :
+
+```shell
+docker-compose up -d
+```

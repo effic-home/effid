@@ -1,7 +1,7 @@
 #!/bin/bash
 apt update -y
 apt upgrade -y
-apt install snmpd git htop -y
+apt install snmpd git -y
 apt install apt-transport-https ca-certificates software-properties-common -y
 
 ## Installer Docker
@@ -20,15 +20,3 @@ docker info
 apt install -y libffi-dev libssl-dev
 apt install -y python3 python3-pip
 pip3 install docker-compose
-
-## Influxdb Telefraf Grafana
-mkdir -p /opt/monitoring && cd /opt/monitoring
-
-docker network create monitoring
-docker volume create grafana-volume
-docker volume create influxdb-volume
-
-## Fichiers
-mkdir -p /opt/monitoring
-wget -O- https://raw.githubusercontent.com/effic-home/effid/master/monitoring/telegraph.conf > telegraph.conf
-wget -O- https://raw.githubusercontent.com/effic-home/effid/master/monitoring/docker-compose.yml > docker-compose.yml
