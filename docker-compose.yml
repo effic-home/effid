@@ -2,23 +2,23 @@ version: "2"
 services:
 
 ### Container portail http
-  web:
-    build: ~/web
-    ports:
-      - "80:80"
-      - "443:443"
+  # web:
+  #   build: ~/web
+  #   ports:
+  #     - "80:80"
+  #     - "443:443"
 
 ### API REST
   api:
     image: effid/api
     ports:
     - "10000:10000"
-  # networks:
-  #   - effid
+    networks:
+      - effid
 
 ### Container Base de données mysql
   database:
-    image: jsurf/rpi-mariadb
+    image: effid/sql
     ports:
     - "3306:3306"
     environment:
@@ -28,8 +28,8 @@ services:
     - MYSQL_DATABASE=eff-id
     volumes:
       - /var/lib/mysql:/var/lib/mysql
-    # networks:
-    #   - effid
+    networks:
+      - effid
 
 ### Container supervision grafana
   # grafana:
@@ -56,8 +56,8 @@ services:
   #     - influxdb-volume:/var/lib/influxdb
 
 # Reseaux de communication entre containers
-# networks:
-#   effid:
+networks:
+  effid:
 
 # Volumes de stockage de données des containers
 # volumes:
