@@ -7,13 +7,13 @@ services:
     ports:
     - 3306:3306
     environment:
-    - MYSQL_ROOT_PASSWORD=APOKALYPSIS
-    - MYSQL_USER=effid
-    - MYSQL_PASSWORD=ABYSS
-    - MYSQL_DATABASE=eff-id
-    - MYSQL_DATA_DIR=/var/lib/mysql
-    - MYSQL_RUN_DIR=/run/mysqld
-    - MYSQL_LOG_DIR=/var/log/mysql
+    - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
+    - MYSQL_USER=${MYSQL_USERNAME}
+    - MYSQL_PASSWORD=${MYSQL_USER_PASSWORD}
+    - MYSQL_DATABASE=${MYSQL_DATABASE}
+    # - MYSQL_DATA_DIR=/var/lib/mysql
+    # - MYSQL_RUN_DIR=/run/mysqld
+    # - MYSQL_LOG_DIR=/var/log/mysql
     networks:
       - backend
 
@@ -22,11 +22,13 @@ services:
     image: effid/api
     ports:
     - 10000:10000
+    env_file:
+    - .env
     environment:
     - HOST=database
-    - USER=effid
-    - PASSWORD=ABYSS
-    - DATABASE=eff-id
+    - USER=${MYSQL_USERNAME}
+    - PASSWORD=${MYSQL_USER_PASSWORD}
+    - DATABASE=${MYSQL_DATABASE}
     networks:
       - frontend
       - backend
