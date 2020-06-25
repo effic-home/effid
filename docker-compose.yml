@@ -11,9 +11,9 @@ services:
     - MYSQL_USER=${MYSQL_USERNAME}
     - MYSQL_PASSWORD=${MYSQL_USER_PASSWORD}
     - MYSQL_DATABASE=${MYSQL_DATABASE}
-    # - MYSQL_DATA_DIR=/var/lib/mysql
-    # - MYSQL_RUN_DIR=/run/mysqld
-    # - MYSQL_LOG_DIR=/var/log/mysql
+    - MYSQL_DATA_DIR=/var/lib/mysql
+    - MYSQL_RUN_DIR=/run/mysqld
+    - MYSQL_LOG_DIR=/var/log/mysql
     networks:
       - backend
 
@@ -22,8 +22,6 @@ services:
     image: effid/api
     ports:
     - 10000:10000
-    env_file:
-    - .env
     environment:
     - HOST=database
     - USER=${MYSQL_USERNAME}
