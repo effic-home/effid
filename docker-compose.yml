@@ -15,7 +15,7 @@ services:
     - MYSQL_RUN_DIR=/run/mysqld
     - MYSQL_LOG_DIR=/var/log/mysql
     networks:
-      - backend
+    - backend
 
 ### API
   api:
@@ -28,18 +28,18 @@ services:
     - PASSWORD=${MYSQL_USER_PASSWORD}
     - DATABASE=${MYSQL_DATABASE}
     networks:
-      - frontend
-      - backend
+    - frontend
+    - backend
 
 ### Container portail http
   web:
     image: effid/web
     ports:
-      - "80:80"
-      - "443:443"
+    - 80:80
+    - 443:443
     networks:
-      - frontend
-      - backend
+    - frontend
+    - backend
 
   # netdata:
   #   image: netdata/netdata
