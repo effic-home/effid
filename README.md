@@ -27,7 +27,7 @@ EFFID peut être installé sur un Raspberry Pi avec cette commande :
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/effic-home/effid/master/install.sh)"
 ```
 
-Il vous suffit ensuite d'éditer le fichier docker-compose.yml afin de personnaliser les mots de passes.
+Il vous suffit ensuite d'éditer le fichier .env afin de personnaliser les mots de passes.
 
 Pour démarrer les services :
 
