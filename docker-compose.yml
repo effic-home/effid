@@ -2,7 +2,7 @@ version: "2"
 services:
 
 ### Container Base de données mysql
-  SQL:
+  sql:
     build: './SQL'
 #    image: effid/sql:latest
     ports:
@@ -19,7 +19,7 @@ services:
     - backend
 
 ### API
-  API:
+  api:
     build: './API'
 #    image: effid/api:latest
     ports:
