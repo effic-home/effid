@@ -7,3 +7,4 @@ git pull
 cd ../SQL
 git pull
 cd ../WEB
+git pull
