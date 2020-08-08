@@ -28,4 +28,4 @@ git clone https://github.com/effid/effi-API API
 git clone https://github.com/effid/effid-sql SQL
 git clone https://github.com/effid/effid-web WEB
 
-docker-compose up -d
+./start.sh
