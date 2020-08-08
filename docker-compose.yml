@@ -2,8 +2,9 @@ version: "2"
 services:
 
 ### Container Base de données mysql
-  database:
-    image: effid/sql
+  SQL:
+    build: './SQL'
+#    image: effid/sql:latest
     ports:
     - 3306:3306
     environment:
@@ -18,8 +19,9 @@ services:
     - backend
 
 ### API
-  api:
-    image: effid/api
+  API:
+    build: './API'
+#    image: effid/api:latest
     ports:
     - 10000:10000
     environment:
@@ -33,7 +35,8 @@ services:
 
 ### Container portail http
   web:
-    image: effid/web
+    build: './WEB'
+#    image: effid/web
     ports:
     - 80:80
     - 443:443
