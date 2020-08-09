@@ -24,6 +24,8 @@ services:
 #    image: effid/api:latest
     ports:
     - 10000:10000
+    depends_on:
+    - "sql"
     environment:
     - HOST=database
     - USER=${MYSQL_USERNAME}
