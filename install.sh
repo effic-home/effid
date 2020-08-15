@@ -26,6 +26,10 @@ pip3 install docker-compose
 ### Installer cluster
 git clone https://github.com/effid/effi-API API
 git clone https://github.com/effid/effid-sql SQL
-git clone https://github.com/effid/effid-web WEB
+git clone https://github.com/effid/effid-web-php WEB
 
-./start.sh
+echo " "
+echo " "
+echo "Modifiez le fichier .env puis lancez les conteneurs avec ./start.sh !"
+echo " "
+echo " "
