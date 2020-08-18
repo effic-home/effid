@@ -41,7 +41,7 @@ services:
     build: './WEB'
     container_name: webapp
     restart: unless-stopped
-    link:
+    links:
     - database:database
     ports:
     - 80:80
