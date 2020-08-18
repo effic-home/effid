@@ -27,7 +27,6 @@ services:
     - "database"
     links:
     - database:database
-    - web:web
     environment:
     - HOST=database
     - USER=${MYSQL_USERNAME}
