@@ -27,6 +27,7 @@ services:
     - "database"
     links:
     - database:database
+    - web:web
     environment:
     - HOST=database
     - USER=${MYSQL_USERNAME}
@@ -38,11 +39,13 @@ services:
   web:
     depends_on:
     - "database"
+    - "api"
     build: './WEB'
     container_name: webapp
     restart: unless-stopped
     links:
     - database:database
+    - api:api
     ports:
     - 80:80
     - 443:443
