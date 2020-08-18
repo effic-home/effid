@@ -39,7 +39,6 @@ services:
   web:
     depends_on:
     - "database"
-    - "api"
     build: './WEB'
     container_name: webapp
     restart: unless-stopped
