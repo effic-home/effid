@@ -1,2 +1,7 @@
-
 .DS_Store
+get-docker.sh
+*.pem
+*.env
+**/API
+**/SQL
+**/WEB
