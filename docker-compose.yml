@@ -16,7 +16,7 @@ services:
     networks:
     - backend
     volumes:
-    - db_data::/var/lib/mysql
+    - db_data:/var/lib/mysql
   api:
     build: './API'
     container_name: api
