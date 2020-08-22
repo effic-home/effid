@@ -21,8 +21,8 @@ Le fichier docker-compose télécharge et déploie les composantes suivantes :
 
 Il existe une démo de l'application hébergée dans un environnement de test.
 
-L'application est disponnible sur https://effid.apollonian.fr https://img.shields.io/website?down_color=red&down_message=Hors%20ligne&up_color=green&up_message=En%20ligne&url=https%3A%2F%2Feffid.apollonian.Fr
-L'API est consultable sur https://api.apollonian.fr https://img.shields.io/website?down_color=red&down_message=Hors%20ligne&up_color=green&up_message=En%20ligne&url=https%3A%2F%2Feffid.apollonian.Fr
+L'application est disponnible sur [ici](https://effid.apollonian.fr) ![Website](https://img.shields.io/website?down_color=red&down_message=Hors%20ligne&up_color=green&up_message=En%20ligne&url=https%3A%2F%2Feffid.apollonian.fr)
+L'API est consultable sur [ici](https://api.apollonian.fr/users) ![Website](https://img.shields.io/website?down_color=red&down_message=Hors%20ligne&up_color=green&up_message=En%20ligne&url=https%3A%2F%2Fapi.apollonian.fr)
 
 # 🚀Installation
 
