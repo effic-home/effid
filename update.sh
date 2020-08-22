@@ -1,10 +1,12 @@
 #!/bin/bash
 
 ### Update cluster
-git pull
+git pull -v
 cd API
-git pull
+git pull -v
 cd ../SQL
-git pull
+git pull -v
 cd ../WEB
-git pull
+git pull -v
+
+docker-compose build
