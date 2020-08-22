@@ -19,9 +19,11 @@ systemctl enable docker.service
 docker info
 
 ## Installation Docker Compose
-apt install -y libffi-dev libssl-dev
-apt install -y python3 python3-pip
-pip3 install docker-compose
+curl -L "https://github.com/docker/compose/releases/download/1.26.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+chmod +x /usr/local/bin/docker-compose
+#apt install -y libffi-dev libssl-dev
+#apt install -y python3 python3-pip
+#pip3 install docker-compose
 
 ### Installer cluster
 git clone https://github.com/effid/effid
