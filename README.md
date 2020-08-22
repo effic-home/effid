@@ -31,7 +31,7 @@ L'API est consultable sur [ici](https://api.apollonian.fr/users)
 EFFID peut être installé sur un Raspberry Pi avec cette commande :
 
 ```shell
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/effic-home/effid/master/install.sh)"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/effid/effid/master/install.sh)"
 ```
 
 Il vous suffit ensuite d'éditer le fichier .env afin de personnaliser les mots de passes.
