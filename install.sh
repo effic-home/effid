@@ -24,6 +24,7 @@ apt install -y python3 python3-pip
 pip3 install docker-compose
 
 ### Installer cluster
+git clone https://github.com/effid/effid . && cd effid
 git clone https://github.com/effid/effi-API API
 git clone https://github.com/effid/effid-sql SQL
 git clone https://github.com/effid/effid-web-php WEB
