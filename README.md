@@ -1,6 +1,6 @@
 # 🆔EFFID
 <p align="center">
-  <img src="https://github.com/effid/effid/blob/master/effid_logo.jpg">
+  <img src="https://github.com/effid/effid/blob/master/effid_logo.jpg" width="300">
 </p>
 
 # 📄Description
@@ -9,13 +9,11 @@ EFFID est composé de plusieurs briques qui communiquent les unes avec les autre
 
 De ce fait, EFFID fonctionne grâce à docker, et le module docker-compose pour construire le stack.
 
-Le fichier docker-compose télécharge et déploie les composantes suivantes :
+Le fichier docker-compose télécharge et compile les images suivantes :
 
-- l'API
-- un serveur Apache avec le site web d'administration
-- une base de données MySQL avec les tables et schémas
-- Un outil de supervision le système avec Netdata et la pile TIG
-- Portainer, afin de proposer un contrôle des conteneurs
+- L'API en node.js
+- Le serveur web Apache PHP, avec le portail utilisateur et administrateur
+- La base de données en MySQL, avec les tables et schémas
 
 # 🔬Environnement de tests
 
@@ -41,7 +39,12 @@ Il vous suffit ensuite d'éditer le fichier .env afin de personnaliser les mots 
 Pour démarrer les services :
 
 ```shell
-docker-compose up -d
+./start.sh
+```
+
+Pour mettre à jour les images docker :
+```shell
+./update.sh
 ```
 # 🗓Roadmap
 
