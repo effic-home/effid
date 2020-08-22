@@ -1,9 +1,9 @@
-# effid
+# 🆔EFFID
 <p align="center">
-  <img src="https://upload.wikimedia.org/wikipedia/fr/thumb/3/3b/Raspberry_Pi_logo.svg/190px-Raspberry_Pi_logo.svg.png">
+  <img src="https://github.com/effid/effid/blob/master/effid_logo.jpg">
 </p>
 
-### Description
+# 📄Description
 
 EFFID est composé de plusieurs briques qui communiquent les unes avec les autres.
 
@@ -17,11 +17,9 @@ Le fichier docker-compose télécharge et déploie les composantes suivantes :
 - Un outil de supervision le système avec Netdata et la pile TIG
 - Portainer, afin de proposer un contrôle des conteneurs
 
-### Installation
+# 🚀Installation
 
 EFFID peut être installé sur un Raspberry Pi avec cette commande :
-
-#### curl
 
 ```shell
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/effic-home/effid/master/install.sh)"
@@ -34,3 +32,6 @@ Pour démarrer les services :
 ```shell
 docker-compose up -d
 ```
+# 🗓Roadmap
+
+# ⭐️Membres du projet
