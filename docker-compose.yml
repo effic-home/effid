@@ -1,8 +1,11 @@
 version: "2.1"
 services:
+## Conteneur de base de données
+## Les informationsd de connexion doivent etre saisies dans le fichier .env
   database:
     build: './SQL'
     container_name: database
+    restart: unless-stopped
     ports:
     - 3306:3306
     environment:
@@ -57,6 +60,7 @@ services:
     - MYSQL_DATABASE=${MYSQL_DATABASE}
 networks:
   backend:
+    internal: true
   frontend:
 volumes:
   db_data: {}
