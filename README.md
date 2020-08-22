@@ -17,13 +17,16 @@ Le fichier docker-compose télécharge et déploie les composantes suivantes :
 - Un outil de supervision le système avec Netdata et la pile TIG
 - Portainer, afin de proposer un contrôle des conteneurs
 
-# Environnement de tests
+# 🔬Environnement de tests
 
 Il existe une démo de l'application hébergée dans un environnement de test.
 
-L'application est disponnible sur [ici](https://effid.apollonian.fr) ![Website](https://img.shields.io/website?down_color=red&down_message=Hors%20ligne&up_color=green&up_message=En%20ligne&url=https%3A%2F%2Feffid.apollonian.fr)
+L'application est disponnible sur [ici](https://effid.apollonian.fr)
 
-L'API est consultable sur [ici](https://api.apollonian.fr/users) ![Website](https://img.shields.io/website?down_color=red&down_message=Hors%20ligne&up_color=green&up_message=En%20ligne&url=https%3A%2F%2Fapi.apollonian.fr)
+L'API est consultable sur [ici](https://api.apollonian.fr/users)
+
+![DEMO](https://img.shields.io/website?down_color=red&down_message=Hors%20ligne&up_color=green&up_message=En%20ligne&url=https%3A%2F%2Feffid.apollonian.fr)
+![API](https://img.shields.io/website?down_color=red&down_message=Hors%20ligne&up_color=green&up_message=En%20ligne&url=https%3A%2F%2Fapi.apollonian.fr)
 
 # 🚀Installation
 
