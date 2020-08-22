@@ -17,6 +17,13 @@ Le fichier docker-compose télécharge et déploie les composantes suivantes :
 - Un outil de supervision le système avec Netdata et la pile TIG
 - Portainer, afin de proposer un contrôle des conteneurs
 
+# Environnement de tests
+
+Il existe une démo de l'application hébergée dans un environnement de test.
+
+L'application est disponnible sur https://effid.apollonian.fr https://img.shields.io/website?down_color=red&down_message=Hors%20ligne&up_color=green&up_message=En%20ligne&url=https%3A%2F%2Feffid.apollonian.Fr
+L'API est consultable sur https://api.apollonian.fr https://img.shields.io/website?down_color=red&down_message=Hors%20ligne&up_color=green&up_message=En%20ligne&url=https%3A%2F%2Feffid.apollonian.Fr
+
 # 🚀Installation
 
 EFFID peut être installé sur un Raspberry Pi avec cette commande :
