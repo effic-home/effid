@@ -21,7 +21,7 @@ Il existe une démo de l'application hébergée dans un environnement de test.
 
 L'application est disponnible sur [ici](https://effid.apollonian.fr)
 
-L'API est consultable sur [ici](https://api.apollonian.fr/users)
+L'API est consultable sur [ici](https://api.apollonian.fr)
 
 ![DEMO](https://img.shields.io/website?down_color=red&down_message=Hors%20ligne&up_color=green&up_message=En%20ligne&url=https%3A%2F%2Feffid.apollonian.fr)
 ![API](https://img.shields.io/website?down_color=red&down_message=Hors%20ligne&up_color=green&up_message=En%20ligne&url=https%3A%2F%2Fapi.apollonian.fr)
